@@ -50,11 +50,6 @@ public class MainController {
         return "ok";
     }
 
-    @GetMapping("/books/input")
-        public String bookInput(){
-            return "" ;
-        }
-
 
 
 
