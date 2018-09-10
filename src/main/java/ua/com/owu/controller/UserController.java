@@ -52,6 +52,7 @@ public class UserController {
                        Model model
     ) throws IOException {
         String username = user.getUsername();
+        System.out.println(username);
         String path = System.getProperty("user.dir")
                 + File.separator
                 + "src"
@@ -84,6 +85,7 @@ public class UserController {
             mailService.sendConfirmMessage(user.getEmail(), user);
         } catch (MessagingException e) {
             e.printStackTrace();
+
         }
         userEditor.setValue(user);
         userService.save(user);
